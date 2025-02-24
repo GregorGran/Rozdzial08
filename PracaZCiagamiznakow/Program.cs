@@ -28,4 +28,34 @@ Console.WriteLine($"pierwszy znak to {miasto[0]} a trzeci to {miasto[2]}");
 
 Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////////////");
 
+Console.WriteLine("dzielenie ciągów znaków");
+string miasta = "Paryż,Berlin,Lizbona,Warszawa,Nowy Jork, Tokyo, Oslo";
+string[] tablicamiast = miasta.Split(',');
+Console.WriteLine($"W kodzie zapisano {tablicamiast.Length} miast.");
+foreach (string element in tablicamiast)
+{
+    Console.WriteLine(element);
+}
+
+Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////////////");
+
+string imieINazwisko = "Adam Nowak";
+int indeksSpacji = imieINazwisko.IndexOf(' ');
+
+string imie = imieINazwisko.Substring(startIndex: 0, length: indeksSpacji);
+
+string nazwisko = imieINazwisko.Substring(startIndex: indeksSpacji + 1);
+Console.WriteLine($"Oryginał: {imieINazwisko}");
+Console.WriteLine($"Po zmianie: {nazwisko}, {imie} ");
+
+Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////////////");
+
+string firma = "Microsoft";
+bool zaczynasieod = firma.StartsWith("M");
+bool zawieraN = firma.Contains("N");
+Console.WriteLine($"Tekst: {firma}");
+Console.WriteLine($"Zaczyna się od litery m: {zaczynasieod}, zawiera literę n: {zawieraN}");
+
+Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////////////");
+
 
